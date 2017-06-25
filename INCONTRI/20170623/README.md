@@ -73,12 +73,9 @@ istruzioni qui sotto.
 1. Ciascuno studente cloni [questo repository](https://github.com/SMERM/SPERM)
    sulla propria macchina
 1. Ciascuno studente crei una propria cartella all'interno della cartella
-   `_WORKSPACE`. Il nome della cartella dovrà osservare il seguente formato:
-   * iniziali del nome dello studente in *maiuscolo* (ad es.: Ezechiele Lupo
-     => EL)
-   * in caso di conflitti di iniziali utilizzare anche una vocale/consonante
-     intermedia (ad es.: Ezechiele Lupo => EZL)
+   `_WORKSPACE`. Il nome della cartella dovrà essere generato seguendo
+   [queste istruzioni](../../_WORKSPACE/README.md)
 1. All'interno della cartella, ciascun programma deve essere inserito in una
    cartella (ad es.: il programma `hello.c` scritto da Ezechiele Lupo dovrà
-   essere collocato nella seguente alberatura: `_WORKSPACE/EZ/hello/hello.c`)
+   essere collocato nella seguente alberatura: `_WORKSPACE/EZCL ZAPM/hello/hello.c`)
 1. Ciascuno studente sarà poi responsabile dei propri `commit`, `pull`, ecc.
