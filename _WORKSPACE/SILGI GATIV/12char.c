@@ -1,1 +1,5 @@
-#include <stdio.h>   /* Exercsise 1-6. Verify that the expression getchar() != EOF is 0 or 1.  */   int main(void)   {     printf("getchar() != EOF evaluates to %d\n", getchar() != EOF);     return 0;   }
+#include <stdio.h>
+int main(void) {
+  printf("getchar() != EOF evaluates to %d\n", getchar() != EOF);
+  return 0;
+}
