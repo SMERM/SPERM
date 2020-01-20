@@ -7,10 +7,11 @@
   * ristrutturazione in funzioni
   * definizione e utilizzo delle funzioni
   * la nozione di *stack* e *stack frame* (funzionamento interno delle funzioni)
-  * ripasso dei tipi naturali
-  * *arrays* e *strutture*
-  * puntatori: referenziazione e de-referenziazione
-  * equivalenza *arrays*/puntatori (similitudini e differenze)
-  * stringhe
+
+## Lavagna
+
+![whiteboard](./SPERM_2020-01-13_16.09.46.jpg)
 
 ## Compiti per casa
+
+* scrivere programmi variazioni sul tema `ciao mondo`
