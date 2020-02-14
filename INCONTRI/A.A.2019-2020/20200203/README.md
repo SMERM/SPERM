@@ -8,15 +8,10 @@
     * argomenti
       * passaggio per valore
       * `const`
-      * argomenti variabili
-  * *arrays* e *strutture*
-  * puntatori:
-    * referenziazione e de-referenziazione
-    * *handles*, puntatori multipli ecc.
-  * equivalenza *arrays*/puntatori (similitudini e differenze)
-  * stringhe
-  * `main` *revisited*: `main` con argomenti e valore di ritorno
-  * puntatori a funzioni
+
+## Lavagna
+
+![whiteboard 1](./SPERM_2020-02-03_16.10.30_1.jpg)
 
 ## Compiti per casa
 
@@ -29,15 +24,3 @@
       * utilizzo nelle funzioni
   * argomenti:
     * passaggio per valore
-    * argomenti variabili
-  * *arrays*: dichiarazione, dichiarazione inizializzata, utilizzo (accesso)
-  * *strutture*: definizione, dichiarazione, dichiarazione inizializzata, utilizzo (accesso)
-  * puntatori:
-    * dichiarazione, utilizzo, de-referenziazione
-    * puntatori multipli
-  * stringhe:
-    * dichiarazione, dichiarazione inizializzata, utilizzo
-    * verifica dello `\0` finale
-    * replica della funzione di libreria `strlen`
-    * replica della funzione di libreria `strtok`
-    * realizzazione della funzione `int conta_vocali(const char *);` (che ritorna il numero di vocali presenti in una stringa)
