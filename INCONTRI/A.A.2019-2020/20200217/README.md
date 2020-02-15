@@ -15,6 +15,7 @@
   * puntatori a funzioni
   * argomenti:
     * spiegazione completa degli argomenti variabili (definizione e utilizzo)
+  * argomenti alla funzione `main`: argomenti della linea di comando
 
 ## Compiti per casa
 
