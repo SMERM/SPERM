@@ -4,7 +4,7 @@
 
 * Backtracking sulla sintassi `C` prima di re-analizzare il codice `osc` già prodotto:
   * argomenti
-    * argomenti variabili
+    * introduzione agli argomenti variabili (senza spiegazione)
   * *arrays* e *strutture*
   * puntatori:
     * referenziazione e de-referenziazione
@@ -13,13 +13,13 @@
   * stringhe
   * `main` *revisited*: `main` con argomenti e valore di ritorno
   * puntatori a funzioni
+  * argomenti:
+    * spiegazione completa degli argomenti variabili (definizione e utilizzo)
 
 ## Compiti per casa
 
 * scrivere, compilare e far girare piccoli programmi per verificare l'effettiva consistenza
   degli argomenti visti in classe:
-  * argomenti:
-    * argomenti variabili
   * *arrays*: dichiarazione, dichiarazione inizializzata, utilizzo (accesso)
   * *strutture*: definizione, dichiarazione, dichiarazione inizializzata, utilizzo (accesso)
   * puntatori:
@@ -31,3 +31,5 @@
     * replica della funzione di libreria `strlen`
     * replica della funzione di libreria `strtok`
     * realizzazione della funzione `int conta_vocali(const char *);` (che ritorna il numero di vocali presenti in una stringa)
+  * argomenti:
+    * argomenti variabili
