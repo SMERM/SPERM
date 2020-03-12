@@ -1,4 +1,10 @@
-# Incontro del 13 marzo 2020
+# Incontro del 13 marzo 2020 (effettuato in remoto)
+
+## Test del sistema
+
+* audio
+* video
+* condivisione schermi
 
 ## Argomenti
 
