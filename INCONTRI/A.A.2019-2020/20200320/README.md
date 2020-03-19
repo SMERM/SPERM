@@ -8,7 +8,7 @@
     * referenziazione e de-referenziazione
     * *handles*, puntatori multipli ecc.
   * equivalenza *arrays*/puntatori (similitudini e differenze)
-  * stringhe
+  * stringhe come *arrays costanti*
   * `main` *revisited*: `main` con argomenti e valore di ritorno
   * puntatori a funzioni
   * argomenti:
