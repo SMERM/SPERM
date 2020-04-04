@@ -1,1 +1,5 @@
-ac-nicb*.odt
+#
+# we don't want to save the original (== editable) autocertifications,
+# but only the pdfs stemming from them
+#
+*.odt
