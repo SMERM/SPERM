@@ -1,4 +1,4 @@
-# Incontro del 3 aprile 2020 (effettuato in remoto)
+# Incontro del 17 aprile 2020 (effettuato in remoto)
 
 ## Argomenti
 
