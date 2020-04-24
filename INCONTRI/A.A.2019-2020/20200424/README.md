@@ -18,6 +18,7 @@
     * buffer circolari
     * stack
   * allocazione dinamica della memoria
+  * strutturazione di un programma *real-world*
 
 ## Compiti per casa
 
