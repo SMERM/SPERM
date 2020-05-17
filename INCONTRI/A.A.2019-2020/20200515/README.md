@@ -1,5 +1,7 @@
 # Incontro del 15 maggio 2020 (effettuato in remoto)
 
+## [Video della lezione](https://youtu.be/vtYpwg-vrOg)
+
 ## Argomenti
 
 * Backtracking sulla sintassi `C` prima di re-analizzare il codice `osc` già prodotto:
