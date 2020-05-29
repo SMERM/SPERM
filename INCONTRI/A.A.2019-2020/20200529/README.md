@@ -1,5 +1,7 @@
 # Incontro del 29 maggio 2020 (effettuato in remoto)
 
+## [Video della lezione](https://youtu.be/bTQzR85lHrw)
+
 ## Correzione dell'esercizio per casa
 
 * completare la funzione `simple_printf`
