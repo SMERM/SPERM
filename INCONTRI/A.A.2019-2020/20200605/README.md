@@ -1,9 +1,6 @@
 # Incontro del 5 giugno 2020 (effettuato in remoto)
 
-## Correzione dell'esercizio per casa
-
-* completamento della funzione `simple_printf` con convertitori per numeri in
-  virgola mobile (`%f`), caratteri (`%c`) e stringhe (`%s`)
+## [Video della lezione](https://youtu.be/ELNtuQ76DCg)
 
 ## Argomenti
 
@@ -11,15 +8,58 @@
   * l'allocazione dinamica della memoria:
     * le funzioni `malloc` e `free`
     * realizzazione delle funzioni `simple_malloc` e `simple_free`
-* l'*object-oriented programming* realizzato col linguaggio `C`
-* algoritmi di programmazione:
-  * liste
-    * singole
-    * doppie
-  * alberi
-  * buffer circolari
-  * stack
-  * sorting
-* strutturazione di un programma *real-world*
+
+## Lavagne
+
+* Spiegazione dell'allocazione dinamica della memoria
+
+![whiteboard 1](./malloc_explanation.png)
+
+![whiteboard 2](./malloc_explanation_2.png)
+
+## Codice `C` prodotto in classe
+
+```C
+#include <stdio.h>
+
+#define MEMORY_SPACE (1000000)
+static char ram[MEMORY_SPACE]={'\0'};
+
+typedef struct
+{
+  char * prossima;
+  char * nostra;
+}Memoria;
+
+void * simple_malloc(const size_t dimension)
+{
+  Memoria *p = (Memoria*)ram;  /*PUNTIAMO MEMORIA ALL'INIZIO DELLA MEMORIA RAM, CON IL CAST L'ARRAY DI BYTE DIVIENE UN STRUTTURA DATI*/
+
+  while(p->prossima != (char*)NULL)
+    p = (Memoria *) p->prossima;
+
+  p->prossima = p->nostra + dimension;
+  return &p->nostra;
+}
+
+void simple_free(void * memoria)
+{
+  Memoria *p = (Memoria*)ram, *precedente = (Memoria*)ram;
+
+  while(p->prossima != (char*)NULL && p->nostra != (char *)memoria)
+  {
+    precedente = p;
+    p = (Memoria *) p->prossima;
+  }
+  p->nostra = (char*)NULL;
+  precedente->prossima = p->prossima;
+
+}
+
+/*  ESERCIZIO   */
+/*CREARE UN MAIN CHE FACCIA IL TEST */
+```
 
 ## Compiti per casa
+
+* completamento delle funzioni `simple_malloc` e `simple_free`
