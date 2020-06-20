@@ -1,25 +1,169 @@
 # Incontro del 19 giugno 2020 (effettuato in remoto)
 
-<!- ## [Video della lezione]() ->
+## [Video della lezione](https://youtu.be/uBxDVjECTu0)
 
 ## Argomenti
 
-* analisi delle funzioni di `stdlib`:
-  * analisi delle funzioni presenti in `stdlib`
-    * funzioni presenti nella libreria `stdlib`
-* analisi delle funzioni di `string`:
-  * analisi delle funzioni presenti in `string`
-    * tipi di variabili presenti in `string` (4)
-    * macro presenti nella libreria `string`
-    * funzioni presenti nella libreria `string`
-* algoritmi di programmazione:
-  * sorting
-  * liste
-    * singole
-    * doppie
-  * alberi
-  * buffer circolari
-  * stack
-* strutturazione di un programma *real-world*
+* realizzazione (parziale) in classe della funzione `simple_atof()`
+
+### Codice `C`
+
+```C
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#define TRUE 1
+#define FALSE 0
+
+double my_pow_10(int x)
+{
+  double result =  1;
+  while(x)
+  {
+    if(x>0)
+    {
+      result *= 10;
+      --x;
+    }
+    else
+    {
+      result /= 10;
+      ++x;
+    }
+  }
+  return result;
+}
+
+int simple_is_digit(char c)
+{
+  int result = FALSE;
+  if(c >= '0' && c<= '9')
+    result = TRUE;
+  return result;
+}
+
+int simple_is_exp(char c)
+{
+  int result = FALSE;
+  if(c == 'e' || c == 'E')
+    result = TRUE;
+  return result;
+}
+
+int simple_is_plus_or_minus(char c)
+{
+  int result = FALSE;
+  if(c == '+' || c == '-')
+    result = TRUE;
+  return result;
+}
+
+int not_eol(char c)
+{
+  int result = FALSE;
+  if(c != '\0')
+    result = TRUE;
+  return result;
+}
+
+/*FIXME: CAMBIARE PER ACCOGLIERE manage_mantissa E manage_exp*/
+double manage_digit(double result, char c, int dot, int pow, int sign)
+{
+  double x = c - '0';
+  if(dot == TRUE)
+  {
+    x *= my_pow_10(pow);
+    pow -=1;
+    result += x;
+  }
+  else
+  {
+    result += x;
+    result *= my_pow_10(pow);
+  }
+  return result;
+}
+
+double manage_mantissa(const char *str)
+{
+
+}
+
+double manage_exp(const char *str)
+{
+
+}
+
+double simple_atof(const char*str)
+{
+  int dot = FALSE;
+  int pow = 0;
+  int sign = 1;
+  double result=0.0;
+  double (*handler)(const char *) = manage_mantissa;
+  const char * p = str;
+  while(not_eol(*p))
+  {
+    while (not_eol(*p) && (*p == ' ' || *p == '\t' || *p == '\n'))
+      ++p;
+    if(simple_is_plus_or_minus(*p))
+      sign = *p == '-' ? -1 : 1;
+    else if(simple_is_digit(*p))
+    {
+      /* qui va cambiato con result = (*handler)(*p); */
+      result = manage_digit(result, *p , dot, pow);
+    }
+    else if(*p == '.' && dot == FALSE)
+      dot = TRUE;
+    else
+      break;
+    ++p;
+
+  }
+  return result;
+}
+
+int main () {
+   float val;
+   char str[20];
+
+   strcpy(str, "98993489");
+   val = simple_atof(str);
+   printf("String value = %s, Float value = %f\n", str, val);
+
+   strcpy(str, "3.1459e-4");
+   val = simple_atof(str);
+   printf("String value = %s, Float value = %12.10f\n", str, val);
+
+   strcpy(str, "3.1459E-4");
+   val = simple_atof(str);
+   printf("String value = %s, Float value = %12.10f\n", str, val);
+
+   strcpy(str, " \t\n3.1459");
+   val = simple_atof(str);
+   printf("String value = %s, Float value = %f\n", str, val);
+
+   strcpy(str, "3ciao.34");
+   val = simple_atof(str);
+   printf("String value = %s, Float value = %f\n", str, val);
+
+   strcpy(str, "3.1459eciao");
+   val = simple_atof(str);
+   printf("String value = %s, Float value = %f\n", str, val);
+
+   strcpy(str, " \t");
+   val = simple_atof(str);
+   printf("String value = %s, Float value = %f\n", str, val);
+
+
+   strcpy(str, "sbagliato");
+   val = simple_atof(str);
+   printf("String value = %s, Float value = %f\n", str, val);
+
+   return(0);
+}
+```
+
+##
 
 ## Compiti per casa
