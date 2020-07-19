@@ -1,6 +1,6 @@
 # Incontro del 17 luglio 2020 (effettuato in remoto)
 
-<!- ## [Video della lezione]() ->
+## [Video della lezione](https://youtu.be/UGUE9KwiLrg)
 
 ## Argomenti
 
